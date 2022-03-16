@@ -1,21 +1,20 @@
 mixin btn(link = true, arrow = false)
     if (link)
-        +e.A.button.h5.btn__.js-btn(href='#')&attributes(attributes)
+        +e.A.btn.js-btn.btn__(href='#')&attributes(attributes)
             +e.back.js-circles
             +e.SPAN.text
                 if block
                     block
             if arrow
                 +e.SPAN.arrow
-                    +e.arrow-inner
-                        +icon('arrowBtn')
+                    +icon('gobbler')
+
     else
-        +e.BUTTON.button.h5.btn__.js-btn()&attributes(attributes)
+        +e.BUTTON.btn.js-btn.btn__()&attributes(attributes)
             +e.back.js-circles
             +e.SPAN.text
                 if block
                     block
             if arrow
                 +e.SPAN.arrow
-                    +e.arrow-inner
-                        +icon('arrowBtn')
+                    +icon('gobbler')

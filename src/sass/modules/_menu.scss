@@ -1,0 +1,44 @@
+.menu {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item {
+    position: relative;
+    &:not(:last-child) {
+      margin-right: 6rem;
+    }
+
+    &:hover {
+      & > a {
+        color: var(--color-blue-hover);
+
+        .icon {
+          fill: var(--color-blue-hover);
+          transform: rotate(180deg);
+        }
+      }
+      .menu__dropdown {
+        opacity: 1;
+        visibility: visible;
+      }
+    }
+
+  }
+
+  &__link {
+    font-size: 2.5rem;
+    line-height: 1.52em;
+    transition: ease-in .2s;
+
+    .icon {
+      width: 2rem;
+      height: 2rem;
+      fill: var(--color-black);
+      vertical-align: middle;
+      margin-left: .5rem;
+      transition: ease .2s;
+    }
+  }
+}

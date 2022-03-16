@@ -1,0 +1,62 @@
+.btn {
+  transition: 0.3s;
+  font-size: 3rem;
+  overflow: hidden;
+  position: relative;
+  border-radius: 6.2rem;
+  text-align: center;
+  min-width: 33.2rem;
+  padding: 4rem 6rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  font-family: 'Libre Franklin', Arial, sans-serif;
+  color: var(--color-white);
+  background-color: var(--color-blue);
+  &__arrow {
+    width: 3rem;
+    height: 2.5rem;
+    margin-left: 1.5rem;
+    fill: var(--color-white);
+    transition: 0.3s;
+    position: relative;
+    z-index: 16;
+  }
+  &__back {
+    position: absolute;
+    left: -.3rem;
+    top: -.3rem;
+    right: -.3rem;
+    bottom: -.3rem;
+    border-radius: inherit;
+    overflow: hidden;
+    /* this fixes the overflow:hidden in Chrome */
+    //-webkit-mask-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC);
+  }
+
+  &__text {
+    z-index: 15;
+    position: relative;
+  }
+
+  &_white {
+    background-color: var(--color-white);
+    color: var(--color-black);
+    box-shadow: 0 0 1rem var(--color-black-shadow);
+    &:hover {
+      color: var(--color-white);
+    }
+    .b-circle {
+      background-color: var(--color-blue);
+      border-color: var(--color-blue);
+    }
+  }
+
+  &_small {
+    min-width: 13rem;
+    padding: 1.5rem 1rem;
+    font-size: 2rem;
+  }
+}

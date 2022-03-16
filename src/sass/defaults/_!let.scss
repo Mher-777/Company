@@ -1,0 +1,14 @@
+:root {
+  --color-black: #000000;
+  --color-black-shadow: #0000001A;
+  --color-white: #ffffff;
+  --color-blue: #007DFB;
+  --color-blue-hover: #5271F3;
+  --color-gray: #707070;
+  --padding-top: 15rem;
+}
+@media only screen and (max-width: 580px) {
+  :root {
+    --padding-top: 6rem;
+  }
+}

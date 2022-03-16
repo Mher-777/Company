@@ -1,1 +1,108 @@
-+e.HEADER.header
++b.HEADER.header
+    .container
+        +e.inner
+            +e.cell._left
+                +e.logo.logo__
+                    +e.A(href="main.html").link
+                        +e.IMG(src="app/img/logo.svg" alt="Логотип")
+            +e.NAV.menu.menu__
+                +e.UL.list
+                    +e.LI.item
+                        +e.A(href="#").link Products
+                    +e.LI.item
+                        +e.A(href="#").link Prices
+                    +e.LI.item
+                        +e.A(href="#").link Security
+                    +e.LI.item
+                        +e.A(href="#").link Resources
+                            +icon('arrowDown')
+                        +e.dropdown.dropdown__
+                            +e.UL.list.flex
+                                +e.LI.item
+                                    +e.A(href="#").link
+                                        +e.SPAN.title About
+                                            +icon('gobbler')
+                                        +e.SPAN.text We aim to continuously refine our services in highly dynamic industry.
+                                +e.LI.item
+                                    +e.A(href="#").link
+                                        +e.SPAN.title Careers
+                                            +icon('gobbler')
+                                        +e.SPAN.text Come join our team and help us build the future.
+                                +e.LI.item
+                                    +e.A(href="#").link
+                                        +e.SPAN.title Support
+                                            +icon('gobbler')
+                                        +e.SPAN.text Answers to FAQs and how to contact our customer service team.
+                                +e.LI.item
+                                    +e.A(href="#").link
+                                        +e.SPAN.title Blog
+                                            +icon('gobbler')
+                                        +e.SPAN.text Aroduct announcements, company updates, and industry perspectives.
+            +e.cell._right
+                +btn()(class="_small _white") login
+                +e.dropdown.language-dropdown__
+                    +e.current English
+                        +icon('arrowDown')
+                    +e.UL.list.css-scrollbar
+                        +e.LI.item
+                            +e.A(href="#").link English
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text1
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text2
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text3
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text4
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text5
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text6
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text7
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text8
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link English
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text1
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text2
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text3
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text4
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text5
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text6
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text7
+                            +icon('check')
+                        +e.LI.item
+                            +e.A(href="#").link Text8
+                            +icon('check')
+                +e.search.search__
+                    +e.BUTTON(type="button").btn.js-btn-search
+                        +icon('search')
+                    +e.content
+                        +e.FORM(action="").form
+                            +input(false, 'Search', 'search')
+                            +e.BUTTON(typr="submit").btn._position
+                                +icon('search')

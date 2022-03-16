@@ -1,0 +1,23 @@
+.intro {
+  min-height: 100vh;
+  position: relative;
+  padding-top: var(--padding-top);
+  &__inner {
+    position: relative;
+    z-index: 5;
+    max-width: 70rem;
+    margin: 0 auto;
+    padding-top: 14.5rem;
+    padding-bottom: 6rem;
+  }
+  &__content {
+    h1 {
+      margin-bottom: 3rem;
+    }
+  }
+  &__btn {
+    margin: 20rem auto 0;
+    display: flex;
+    max-width: fit-content;
+  }
+}

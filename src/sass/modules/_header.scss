@@ -1,0 +1,30 @@
+.header {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  right: 0;
+  top: 8rem;
+  z-index: 100;
+  &__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__cell {
+    flex: 1 1 auto;
+    max-width: 37rem;
+    &_right {
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &__btn {
+    margin-right: 3.5rem;
+  }
+
+  &__dropdown {
+    max-width: 17.5rem;
+    margin-right: 1.5rem;
+  }
+}
