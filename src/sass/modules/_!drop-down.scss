@@ -11,6 +11,27 @@
   opacity: 0;
   transition: ease-in .2s;
   visibility: hidden;
+  @include large-tablet {
+    right: -17.5rem;
+  }
+  @include small-tablet {
+    opacity: 1;
+    visibility: visible;
+    padding: 0;
+    right: 0;
+    min-width: auto;
+    background-color: transparent;
+    border-radius: 0;
+    position: static;
+    box-shadow: none;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease-out;
+    &__list {
+      display: block;
+
+    }
+  }
   &::before {
     content: '';
     position: absolute;
@@ -18,14 +39,29 @@
     width: 100%;
     top: -2rem;
     background-color: transparent;
+    display: none;
+  }
+  &__text {
+    @include small-tablet {
+      display: none;
+    }
   }
   &__list {
     margin-left: -2rem;
+    @include small-tablet {
+      margin-left: 4rem;
+      padding-top: 1rem;
+    }
   }
   &__item {
     width: calc(50% - 2rem);
     margin-bottom: 6rem;
     margin-left: 2rem;
+    @include small-tablet {
+      width: auto;
+      margin-left: 0;
+      margin-bottom: 0;
+    }
   }
   &__link {
     display: block;
@@ -51,6 +87,11 @@
       transition: ease-in .2s;
       opacity: 0;
       fill: var(--color-blue-hover);
+    }
+    @include small-tablet {
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-bottom: 0;
     }
   }
 }
@@ -136,6 +177,7 @@
     transition: ease-in .2s;
     max-height: 35.5rem;
     overflow-y: auto;
+    min-width: 17.5rem;
     &::before {
       content: '';
       position: absolute;
@@ -143,6 +185,10 @@
       width: 100%;
       top: -.8rem;
       background-color: transparent;
+    }
+    @include small-tablet {
+      top: auto;
+      bottom: calc(100% + .8rem);
     }
   }
 }

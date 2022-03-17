@@ -1,0 +1,113 @@
+.modals {
+  padding: 5rem;
+
+  @include small-tablet {
+    padding: 2.5rem;
+  }
+
+  @include large-mobile {
+    padding: 2.5rem 1.5rem;
+  }
+
+  &__field {
+    margin-bottom: 2rem;
+  }
+
+  &__content {
+    width: 640 / 1920 * 100%;
+    @include large-desktop {
+      width: 600 / 1440 * 100%;
+    }
+    @include large-tablet {
+      width: 550 / 1120 * 100%;
+    }
+    @include small-tablet {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 3.5rem;
+    margin-bottom: 7.5rem;
+    @include small-tablet {
+      font-size: 3rem;
+      margin-bottom: 5rem;
+    }
+  }
+
+  &__subtitle {
+    font-size: 2.5rem;
+    margin-bottom: 4rem;
+    font-weight: 600;
+    @include small-tablet {
+      margin-bottom: 2.5rem;
+      font-size: 2rem;
+    }
+  }
+
+  &__btn {
+    margin-top: 4.5rem;
+    @include small-tablet {
+      margin-top: 3rem;
+    }
+  }
+
+  &__close {
+    cursor: pointer;
+    color: var(--color-gray);
+    position: absolute;
+    z-index: 5;
+    top: 0;
+    right: 1.5rem;
+    font-size: 5rem;
+  }
+
+  &__bg {
+    width: 800 / 1920 * 100%;
+    right: 0;
+    left: auto;
+    @include small-tablet {
+      display: none;
+    }
+  }
+}
+
+
+.mfp-bg {
+  background: var(--color-white);
+}
+
+.mfp-fade.mfp-bg {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.mfp-fade.mfp-bg.mfp-ready {
+  opacity: 1;
+}
+
+.mfp-fade.mfp-bg.mfp-removing {
+  opacity: 0;
+}
+.mfp-content {
+  position: static;
+}
+.mfp-fade.mfp-wrap .mfp-content {
+  opacity: 0;
+
+  -webkit-transition: all 0.15s ease-out;
+  -moz-transition: all 0.15s ease-out;
+  transition: all 0.15s ease-out;
+}
+
+.mfp-fade.mfp-wrap.mfp-ready .mfp-content {
+  opacity: 1;
+}
+
+.mfp-fade.mfp-wrap.mfp-removing .mfp-content {
+  opacity: 0;
+}

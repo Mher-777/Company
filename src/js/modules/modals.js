@@ -10,9 +10,7 @@ var modals = {
 
 		e.preventDefault();
 
-		config.log('close modal');
-
-		$.magnificPopup.close();	
+		$.magnificPopup.close();
 
 	},
 
@@ -37,16 +35,13 @@ var modals = {
 			$(modal + ' input[name="form"]').val($(e.currentTarget).data('input'))
 		}	
 
-		config.log('modal open')
-
 		$.magnificPopup.open({
 			tClose: 'Закрыть',
-			removalDelay: 600,
+			removalDelay: 300,
 			fixedContentPos: true,
 			fixedBgPos: true,
-			overflowY: 'hidden',			
-			closeMarkup: '<div class="modals__close close js-close-modal"><svg class="icon icon-close close2" viewBox="0 0 612 612"><use xlink:href="/app/icons/sprite.svg#cls"></use></svg></div>',
-			mainClass: 'css-modal-animate',				
+			closeMarkup: '<div class="modals__close close js-close-modal">×</div>',
+			mainClass: 'mfp-fade',
 			items: {
 				src: modal,
 				type: 'inline'

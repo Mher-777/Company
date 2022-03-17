@@ -4,6 +4,20 @@
 .li {
 	font-size: 2.2rem;
 	line-height: (27/22) * 1;
+	@include large-tablet {
+		font-size: 2rem;
+		line-height: (24/20) * 1;
+	}
+
+	@include small-tablet {
+		font-size: 1.8rem;
+		line-height: (24/18) * 1;
+	}
+
+	@include large-mobile {
+		font-size: 1.6rem;
+		line-height: (21/16) * 1;
+	}
 }
 
 .content ul,
@@ -42,6 +56,20 @@
 .content h1 {
 	font-size: 9.6rem;
 	line-height: (110/96) * 1;
+	@include large-desktop {
+		font-size: 8.5rem;
+		line-height: (100/85) * 1;
+	}
+	@include large-tablet {
+		font-size: 7rem;
+		line-height: (85/70) * 1;
+	}
+	@include small-tablet {
+		font-size: 6rem;
+	}
+	@include large-mobile {
+		font-size: 5rem;
+	}
 }
 
 .h2,

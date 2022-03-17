@@ -2,12 +2,19 @@
   --color-black: #000000;
   --color-black-shadow: #0000001A;
   --color-white: #ffffff;
+  --color-red: #fc1c1c;
   --color-blue: #007DFB;
   --color-blue-hover: #5271F3;
   --color-gray: #707070;
+  --color-light-gray: #F3F4F6;
   --padding-top: 15rem;
 }
-@media only screen and (max-width: 580px) {
+@media only screen and (max-width: 1440px) {
+  :root {
+    --padding-top: 10rem;
+  }
+}
+@media only screen and (max-width: 768px) {
   :root {
     --padding-top: 6rem;
   }

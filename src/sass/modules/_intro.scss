@@ -2,6 +2,9 @@
   min-height: 100vh;
   position: relative;
   padding-top: var(--padding-top);
+  @include large-tablet {
+    min-height: auto;
+  }
   &__inner {
     position: relative;
     z-index: 5;
@@ -9,15 +12,33 @@
     margin: 0 auto;
     padding-top: 14.5rem;
     padding-bottom: 6rem;
+    @include large-tablet {
+      padding-top: 10rem;
+      padding-bottom: 10rem;
+    }
+    @include small-tablet {
+      padding-top: 6rem;
+      padding-bottom: 6rem;
+    }
   }
   &__content {
     h1 {
       margin-bottom: 3rem;
+    }
+    @include small-tablet {
+      text-align: left;
     }
   }
   &__btn {
     margin: 20rem auto 0;
     display: flex;
     max-width: fit-content;
+    @include large-desktop {
+      margin-top: 15rem;
+    }
+    @include small-tablet {
+      margin-top: 7rem;
+      margin-left: 0;
+    }
   }
 }

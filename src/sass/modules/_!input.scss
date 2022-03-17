@@ -1,23 +1,105 @@
 .input {
+  position: relative;
+  &__label {
+    position: absolute;
+    font-size: 2.5rem;
+    color: var(--color-gray);
+    top: 2rem;
+    left: 4.5rem;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 12rem;
+    @include large-desktop {
+      font-size: 2.3rem;
+      top: 1.75rem;
+    }
+    @include large-tablet {
+      font-size: 2rem;
+      top: 1.5rem;
+      left: 3.5rem;
+      max-width: 9rem;
+    }
+  }
   &__field {
-    background-color: var(--color-white);
     outline: none;
-    height: 5.5rem;
-    padding: 1.3rem 2rem 1.3rem 3.5rem;
     display: block;
     width: 100%;
-    border-radius: 2.8rem;
-    box-shadow: 0 0 1rem var(--color-blue);
-    font-size: 2rem;
     border: 1px solid transparent;
     transition: ease-in .2s;
+    height: 8rem;
+    background-color: var(--color-light-gray);
+    border-radius: 5.2rem;
+    padding: 2rem 4.5rem 2rem 18rem;
+    font-size: 2.5rem;
     @include placeholder {
       color: var(--color-gray);
-      font-size: 2rem;
+      font-size: 2.5rem;
     }
-    &:focus {
-      box-shadow: none;
-      border-color: var(--color-blue);
+    @include large-desktop {
+      height: 7rem;
+      font-size: 2.3rem;
+      padding: 2rem 4.5rem 2rem 15rem;
+      &::placeholder {
+        font-size: 2.3rem;
+      }
+    }
+    @include large-tablet {
+      height: 6rem;
+      font-size: 2rem;
+      padding: 1.3rem 3.5rem 1.3rem 13rem;
+      border-radius: 4rem;
+      @include placeholder {
+        font-size: 2rem;
+      }
+    }
+    &_small {
+      height: 5.5rem;
+      padding: 1.3rem 2rem 1.3rem 3.5rem;
+      border-radius: 2.8rem;
+      font-size: 2rem;
+      @include placeholder {
+        font-size: 2rem;
+      }
+    }
+    &_shadow {
+      background-color: var(--color-white);
+      box-shadow: 0 0 1rem var(--color-blue);
+      &:focus {
+        box-shadow: none;
+        border-color: var(--color-blue);
+      }
+    }
+
+
+  }
+  &__parent {
+    &.is-focus {
+      .input__field {
+        box-shadow: 0 0 1rem var(--color-blue);
+      }
+    }
+    &.valid {
+      .input__field {
+        box-shadow: 0 0 1rem var(--color-light-gray);
+        border-color: var(--color-blue);
+      }
+    }
+    &.error {
+      .input__field {
+        box-shadow: 0 0 .4rem var(--color-red);
+        border-color: var(--color-red);
+      }
+      & ~ .error {
+        color: var(--color-red);
+        font-size: 2rem;
+        margin-top: .5rem;
+        display: block;
+        margin-left: 1.5rem;
+        @include large-tablet {
+          font-size: 1.6rem;
+        }
+      }
     }
   }
 }

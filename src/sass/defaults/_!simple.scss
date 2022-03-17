@@ -7,11 +7,14 @@
 }
 
 .container {
-	padding: 0 2rem;
-	max-width: 155rem;
+	padding: 0 3rem;
+	max-width: 157rem;
 	margin: 0 auto;
 	@include large-tablet {
 		max-width: 100%;
+	}
+	@include large-mobile {
+		padding: 0 2rem;
 	}
 }
 
@@ -21,6 +24,21 @@ html {
 	&.js-lock {
 		overflow: hidden;
 	}
+	@include large-desktop {
+		font-size: 100vw / (1440/10);
+	}
+
+	@include large-tablet {
+		font-size: 100vw / (1120/10);
+	}
+
+	@include small-tablet {
+		font-size: 100vw / (768/10);
+	}
+
+	@include large-mobile {
+		font-size: 100vw / (580/10);
+	}
 }
 
 body {
@@ -28,6 +46,9 @@ body {
 	font-size: 1.8rem;
 	font-family: 'Poppins', Arial, sans-serif;
 	color: var(--color-black);
+	@include large-tablet {
+		font-size: 1.6rem;
+	}
 	&.js-lock {
 		overflow-x: hidden;
 		overflow-y: scroll;

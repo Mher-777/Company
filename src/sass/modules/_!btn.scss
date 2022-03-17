@@ -23,6 +23,15 @@
     transition: 0.3s;
     position: relative;
     z-index: 16;
+    @include large-desktop {
+      width: 2.5rem;
+      height: 2rem;
+      margin-left: 1rem;
+    }
+    @include small-tablet {
+      width: 2rem;
+      height: 1.7rem;
+    }
   }
   &__back {
     position: absolute;
@@ -54,9 +63,32 @@
     }
   }
 
+  @include large-desktop {
+    font-size: 2.6rem;
+    min-width: 30rem;
+    padding: 3rem 5rem;
+  }
+
+  @include large-tablet {
+    font-size: 2.4rem;
+    min-width: 28rem;
+    padding: 2.8rem 4.5rem;
+  }
+
+  @include small-tablet {
+    font-size: 2.2rem;
+    min-width: 25rem;
+    padding: 2rem 3.7rem;
+  }
+
   &_small {
     min-width: 13rem;
     padding: 1.5rem 1rem;
     font-size: 2rem;
+    @include large-tablet {
+      font-size: 1.8rem;
+      min-width: 11rem;
+      padding: 1.2rem .8rem;
+    }
   }
 }

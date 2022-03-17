@@ -1,1 +1,12 @@
-+b.modals._recall.mfp-hide#recall
++b.modals.mfp-hide#login
+    +e.title Company
+    +e.content
+        +e.subtitle Registration form
+        +e.FORM(action="").form.is-validate
+            +input('Name', '', 'name')
+            +input('Country', '', 'country')
+            +input('Email', '', 'email')
+            +input('Phone', '+3', 'phone')(data-inputmask="'mask': '+3 (999) 99 99 99'")
+            +btn(false)(type="submit") Registration
+    +e.bg.position
+        img(src="/img/login-bg.jpg" alt="").object-fit

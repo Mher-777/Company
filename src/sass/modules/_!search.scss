@@ -44,6 +44,14 @@
       width: 100%;
       top: -4.5rem;
       background-color: transparent;
+      @include small-tablet {
+        top: auto;
+        bottom: -4.5rem;
+      }
+    }
+    @include small-tablet {
+      top: auto;
+      bottom: calc(100% + 4.5rem);
     }
   }
 }

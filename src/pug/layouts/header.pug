@@ -13,7 +13,7 @@
                         +e.A(href="#").link Prices
                     +e.LI.item
                         +e.A(href="#").link Security
-                    +e.LI.item
+                    +e.LI.item.is-pointer
                         +e.A(href="#").link Resources
                             +icon('arrowDown')
                         +e.dropdown.dropdown__
@@ -38,8 +38,8 @@
                                         +e.SPAN.title Blog
                                             +icon('gobbler')
                                         +e.SPAN.text Aroduct announcements, company updates, and industry perspectives.
-            +e.cell._right
-                +btn()(class="_small _white") login
+            +e.cell._right(data-da=".header__menu, 768, last")
+                +btn()(class="_small _white" href="#login").js-modal login
                 +e.dropdown.language-dropdown__
                     +e.current English
                         +icon('arrowDown')
@@ -103,6 +103,8 @@
                         +icon('search')
                     +e.content
                         +e.FORM(action="").form
-                            +input(false, 'Search', 'search')
+                            +input(false, 'Search', 'search')._shadow._small
                             +e.BUTTON(typr="submit").btn._position
                                 +icon('search')
+            +b.BUTTON(typr="button").hamburger.js-hamburger
+                +icon('hamburger')

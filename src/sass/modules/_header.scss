@@ -5,6 +5,12 @@
   right: 0;
   top: 8rem;
   z-index: 100;
+  @include large-desktop {
+    top: 4rem;
+  }
+  @include small-tablet {
+    top: 3rem;
+  }
   &__inner {
     display: flex;
     align-items: center;
@@ -16,15 +22,48 @@
     &_right {
       display: flex;
       align-items: center;
+      @include small-tablet {
+        flex: none;
+        margin-top: auto;
+        max-width: 100%;
+      }
+    }
+    &_left {
+      @include large-desktop {
+        max-width: 25rem;
+      }
+      @include small-tablet {
+        max-width: 15rem;
+        position: relative;
+        z-index: 51;
+      }
     }
   }
 
   &__btn {
     margin-right: 3.5rem;
+    @include large-tablet {
+      margin-right: 2.5rem;
+    }
+  }
+
+  &__search {
+    @include small-tablet {
+      margin-left: auto;
+    }
   }
 
   &__dropdown {
     max-width: 17.5rem;
     margin-right: 1.5rem;
+    @include small-tablet {
+      max-width: 10.5rem;
+    }
+  }
+  &__menu {
+    margin-right: 3rem;
+    @include small-tablet {
+      margin-right: 0;
+    }
   }
 }
